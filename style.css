@@ -1,0 +1,20 @@
+.pricing {
+	margin-top: 25px;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+}
+.pricing input,
+button {
+	width: 300px;
+	text-align: center;
+}
+
+.pricing button {
+	margin-top: 25px;
+}
+/* 
+.table-op {
+	width: 00px;
+} */
