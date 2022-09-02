@@ -18,3 +18,7 @@ button {
 .table-op {
 	width: 00px;
 } */
+
+input {
+	border: 2px solid #010101;
+}
