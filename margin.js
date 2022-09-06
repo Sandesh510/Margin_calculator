@@ -7,7 +7,7 @@ function myJsFunction() {
 	let BR = parseInt(document.getElementById('value2').value)
 	let BRY = BR * 12
 	let margin = BRY - loadingV
-	let marginP = margin / BRY
+	let marginP = (margin / BRY) * 100
 
 	// console.log('ECTC ==> ' + ECTC)
 	// console.log('Loading ==> ' + loadingV)
@@ -25,6 +25,16 @@ function myJsFunction() {
 	document.getElementById('Margin').innerHTML =
 		margin.toLocaleString('en-IN') + ' ₹'
 	document.getElementById('MarginP').innerHTML =
-		(marginP * 100).toFixed(2) + ' %'
+		//(marginP * 100).toFixed(2) + ' %'
+		marginP.toFixed(2) + ' %'
+
 	//document.getElementById('ECTC').innerHTML = 'ECTC ==> ' + ECTC
+
+	if (marginP < 20) {
+		document.getElementById('Margin').classList.add('text-red-600')
+		document.getElementById('MarginP').classList.add('text-red-600')
+	} else {
+		document.getElementById('Margin').classList.add('text-green-600')
+		document.getElementById('MarginP').classList.add('text-green-600')
+	}
 }
