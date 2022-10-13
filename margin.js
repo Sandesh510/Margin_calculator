@@ -1,8 +1,10 @@
 function myJsFunction() {
 	//var text = document.getElementById('input1').value
+	document.getElementById('Margin').classList.remove
+	document.getElementById('MarginP').classList.remove
 
 	let ECTC = parseInt(document.getElementById('value1').value)
-	const Loading = 0.45
+	const Loading = 0.5
 	let loadingV = ECTC * Loading + ECTC
 	let BR = parseInt(document.getElementById('value2').value)
 	let BRY = BR * 12
