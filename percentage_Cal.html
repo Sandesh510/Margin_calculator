@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Margin-Calculator</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							clifford: '#da373d',
+						},
+					},
+				},
+			}
+		</script>
+	</head>
+	<body>
+		<header class="p-4 dark:bg-gray-800 dark:text-gray-100 text-center">
+			<div class="navbar bg-base-100">
+				<div class="navbar-start">
+					<div class="dropdown">
+						<label tabindex="0" class="btn btn-ghost btn-circle">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-5 w-5"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M4 6h16M4 12h16M4 18h7"
+								/>
+							</svg>
+						</label>
+						<ul
+							tabindex="0"
+							class="menu menu-compact dropdown-content text-center mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+						>
+							<li>
+								<a href="/Index.html">Margin Calculator</a>
+							</li>
+							<li>
+								<a href="/percentage_Cal.html">Percentage Calculator</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="navbar-center">
+					<a class="btn btn-success mt-35px rounded-full"
+						><span class="mr-2 shadow">
+							<i class="fa fa-calculator" aria-hidden="true"></i> </span
+						>Percent Calculator</a
+					>
+				</div>
+			</div>
+		</header>
+		<div class="flex items-center justify-center p-4">
+			<div
+				class="flex items-center p-4 card w-auto bg-base-100 shadow-xl border-2 border-zinc-300"
+			>
+				<label for="Value" class="mr-2">Enter Buying Price :</label>
+				<input
+					type="text"
+					placeholder="Type here"
+					name="value"
+					id="Mval"
+					class="input w-full max-w-xs ml-2 border-2 border-zinc-800"
+					onfocusout="calculatePer()"
+				/>
+
+				<br />
+				<label for="Value" class="mr-2">Enter Stop Loss Value :</label>
+				<input
+					type="text"
+					placeholder="Type here"
+					name="value"
+					id="Sval"
+					class="input w-full max-w-xs ml-2 border-2 border-zinc-800"
+					onfocusout="calculatePer()"
+				/>
+				<br />
+				<label for="Value" class="mr-2">Enter Profit Booking Value:</label>
+				<input
+					type="text"
+					placeholder="Type here"
+					name="value"
+					id="Pval"
+					class="input w-full max-w-xs ml-2 border-2 border-zinc-800"
+					onfocusout="calculatePer()"
+				/>
+				<button class="btn btn-wide mt-4" onclick="makeBlank()">
+					<i class="fa fa-refresh mr-2" aria-hidden="true"></i> Refresh
+				</button>
+			</div>
+		</div>
+		<div class="flex items-center justify-center">
+			<table
+				class="w-auto text-xs rounded-xl border-collapse border border-slate-400"
+			>
+				<colgroup>
+					<col />
+					<col />
+					<col class="w-24" />
+				</colgroup>
+				<thead class="dark:bg-gray-700">
+					<tr class="text-left">
+						<th class="p-3 border border-slate-300">
+							<div class="flex item-center justify-center p-2">
+								<img
+									width="40px"
+									src="./Assets/SVG/buy-sign-hand-svgrepo-com.svg"
+									alt=""
+								/>
+								<span class="mr-2"></span>Buying Price
+							</div>
+						</th>
+						<th class="p-3 border border-slate-300">
+							<div class="flex item-center justify-center p-2">
+								<img
+									width="40px"
+									src="./Assets/SVG/loss-svgrepo-com.svg"
+									alt=""
+								/>
+								<span class="mr-2"></span> Stop Loss
+							</div>
+						</th>
+						<th class="p-3 border border-slate-300">
+							<div class="flex item-center justify-center p-2">
+								<img
+									width="40px"
+									src="./Assets/SVG/profits-svgrepo-com.svg"
+									alt=""
+								/>
+								<span class="mr-2"></span> Profit Book
+							</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr
+						class="border-b border-opacity-20 dark:border-gray-700 dark:bg-gray-900"
+					>
+						<td class="p-3 border border-slate-300">
+							<p id="BV"></p>
+						</td>
+						<td class="p-3 border border-slate-300">
+							<p id="SL"></p>
+						</td>
+						<td class="p-3 border border-slate-300">
+							<p id="PB"></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script src="./percent.js"></script>
+	</body>
+</html>
