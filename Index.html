@@ -62,11 +62,15 @@
 							<li>
 								<a href="/percentage_Cal.html">Percentage Calculator</a>
 							</li>
+							<li>
+								<a href="/test.html">Test Calculator</a>
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="navbar-center">
-					<a class="btn btn-success mt-35px rounded-full"
+					<a
+						class="btn btn-success mt-35px rounded-full flex justify-center items-center"
 						><span class="mr-2 shadow">
 							<i class="fa fa-calculator" aria-hidden="true"></i> </span
 						>Margin Calculator</a
@@ -75,7 +79,7 @@
 			</div>
 		</header>
 
-		<div class="p-4 pricing flex justify-center">
+		<div class="p-4 pricing flex justify-center items-center">
 			<label
 				for="price"
 				class="block text-sm font-medium text-gray-700 dark:text-white"
@@ -91,7 +95,7 @@
 					type="number"
 					name="value1"
 					id="value1"
-					class="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+					class="input input-bordered w-full max-w-xs"
 					placeholder="0.00"
 				/>
 			</div>
@@ -101,7 +105,7 @@
 				class="block text-sm font-medium text-gray-700 dark:text-white"
 				>Enter Monthly Billing</label
 			>
-			<div class="relative mt-1 rounded-md shadow-sm">
+			<!-- <div class="relative mt-1 rounded-md shadow-sm">
 				<div
 					class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
 				>
@@ -114,56 +118,52 @@
 					class="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 					placeholder="0.00"
 				/>
+			</div> -->
+
+			<div class="relative mt-1 rounded-md shadow-sm">
+				<div
+					class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+				>
+					<span class="text-gray-500 sm:text-sm">₹</span>
+				</div>
+				<input
+					placeholder="Type here"
+					type="number"
+					name="value2"
+					id="value2"
+					class="input input-bordered w-full max-w-xs"
+				/>
 			</div>
+
 			<button class="btn btn-success mt-35px" onclick="myJsFunction()">
 				Calculate
 			</button>
 		</div>
 
-		<div class="overflow-x-auto mt-35px text-gray-900 dark:text-white table-op">
-			<table class="table w-full">
-				<!-- head -->
-				<thead>
-					<tr>
-						<th>Content</th>
-						<th>Calculations</th>
-					</tr>
-				</thead>
-				<tbody>
-					<!-- row 1 -->
-					<tr>
-						<td>Expected CTC</td>
-						<td id="ECTC">₹</td>
-					</tr>
-					<!-- row 2 -->
-					<tr>
-						<td>Billing Rate Per Month</td>
-						<td id="BR">₹</td>
-					</tr>
+		<!-- //Table Code  -->
+		<div class="flex justify-center items-center">
+			<div
+				class="flex flex-row justify-center items-center bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+			>
+				<div class="text-center">
+					<p class="text-gray-600 text-lg font-bold">Expected CTC</p>
+					<p class="text-gray-400 text-sm" id="ECTC">₹</p>
+				</div>
 
-					<!-- row 3 -->
-					<tr>
-						<td>Loading Cost</td>
-						<td id="Loading">₹</td>
-					</tr>
-					<!-- row 4 -->
-					<tr>
-						<td>Billing Rate for Year</td>
-						<td id="BRY">₹</td>
-					</tr>
-					<!-- row 5 -->
+				<div class="text-center mx-4">
+					<p class="text-gray-600 text-lg font-bold">Billing Rate Per Month</p>
+					<p class="text-gray-400 text-sm" id="BR">₹</p>
+				</div>
 
-					<tr>
-						<td>Margin</td>
-						<td id="Margin" class="">₹</td>
-					</tr>
-					<!-- row 6 -->
-					<tr>
-						<td>Margin in Percentage</td>
-						<td id="MarginP" class="">%</td>
-					</tr>
-				</tbody>
-			</table>
+				<div class="text-center mx-4">
+					<p class="text-gray-600 text-lg font-bold">Billing Rate for Year</p>
+					<p class="text-gray-400 text-sm" id="BRY">₹</p>
+				</div>
+				<div class="text-center mx-4">
+					<p class="text-gray-600 text-lg font-bold">Margin in Percentage</p>
+					<p class="text-gray-400 text-sm" id="MarginP">%</p>
+				</div>
+			</div>
 		</div>
 
 		<script src="margin.js"></script>
