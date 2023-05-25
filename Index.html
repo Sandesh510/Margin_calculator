@@ -141,55 +141,27 @@
 		</div>
 
 		<!-- //Table Code  -->
-		<div class="flex justify-center items-center">
-			<div
-				class="flex flex-row justify-center items-center bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ml-2"
-			>
-				<div class="text-center">
-					<p class="text-gray-600 text-lg font-bold">Expected CTC</p>
-					<p class="text-gray-400 text-sm" id="ECTC">₹</p>
-				</div>
-				<!-- 
-				<div class="text-center mx-4">
-					<p class="text-gray-600 text-lg font-bold">Billing Rate Per Month</p>
-					<p class="text-gray-400 text-sm" id="BR">₹</p>
-				</div>
-
-				<div class="text-center mx-4">
-					<p class="text-gray-600 text-lg font-bold">Billing Rate for Year</p>
-					<p class="text-gray-400 text-sm" id="BRY">₹</p>
-				</div>
-				<div class="text-center mx-4">
-					<p class="text-gray-600 text-lg font-bold">Margin in Percentage</p>
-					<p class="text-gray-400 text-sm" id="MarginP">%</p>
-				</div> -->
-			</div>
-
-			<div
-				class="flex flex-row justify-center items-center bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ml-2"
-			>
-				<div class="text-center mx-4">
-					<p class="text-gray-600 text-lg font-bold">Billing Rate Per Month</p>
-					<p class="text-gray-400 text-sm" id="BR">₹</p>
-				</div>
-			</div>
-
-			<div
-				class="flex flex-row justify-center items-center bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ml-2"
-			>
-				<div class="text-center mx-4">
-					<p class="text-gray-600 text-lg font-bold">Billing Rate for Year</p>
-					<p class="text-gray-400 text-sm" id="BRY">₹</p>
-				</div>
-			</div>
-			<div
-				class="flex flex-row justify-center items-center bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ml-2"
-			>
-				<div class="text-center mx-4">
-					<p class="text-gray-600 text-lg font-bold">Margin in Percentage</p>
-					<p class="text-gray-400 text-sm" id="MarginP">%</p>
-				</div>
-			</div>
+		<div class="overflow-x-auto mt-35px text-gray-900 dark:text-white table-op">
+			<table class="table w-full">
+				<!-- head -->
+				<thead>
+					<tr>
+						<th>Expected CTC</th>
+						<th>Billing Rate Per Month</th>
+						<th>Billing Rate for Year</th>
+						<th>Margin in Percentage</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- row 1 -->
+					<tr>
+						<td id="ECTC">₹</td>
+						<td id="BR">₹</td>
+						<td id="BRY">₹</td>
+						<td id="MarginP" class="">%</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 
 		<script src="margin.js"></script>
