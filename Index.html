@@ -32,37 +32,8 @@
 		</script>
 	</head>
 	<body>
-		<header class="p-4 dark:bg-gray-800 dark:text-gray-100 text-center">
+		<!-- <header class="p-4 dark:bg-gray-800 dark:text-gray-100 text-center">
 			<div class="navbar bg-base-100">
-				<div class="navbar-start">
-					<div class="dropdown">
-						<label tabindex="0" class="btn btn-ghost btn-circle">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-5 w-5"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M4 6h16M4 12h16M4 18h7"
-								/>
-							</svg>
-						</label>
-						<ul
-							tabindex="0"
-							class="menu menu-compact dropdown-content text-center mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-						>
-							<li>
-								<a href="/Index.html">Margin Calculator</a>
-							</li>
-							
-						</ul>
-					</div>
-				</div>
 				<div class="navbar-center">
 					<a
 						class="btn btn-success mt-35px rounded-full flex justify-center items-center"
@@ -72,6 +43,17 @@
 					>
 				</div>
 			</div>
+		</header> -->
+
+		<header class="flex items-center justify-center">
+			<h1 class="text-2xl font-bold">
+				<i
+					class="fa fa-calculator"
+					style="color: #1c8d73"
+					aria-hidden="true"
+				></i>
+				<span style="color: #1c8d73">Margin Calculator</span>
+			</h1>
 		</header>
 
 		<div class="p-4 pricing flex justify-center items-center">
@@ -136,42 +118,26 @@
 		</div>
 
 		<!-- //Table Code  -->
-		<div class="overflow-x-auto mt-35px text-gray-900 dark:text-white table-op">
-			<table class="table w-full">
-				<!-- head -->
-				<thead>
-					<tr>
-						<th>Content</th>
-						<th>Calculations</th>
-					</tr>
-				</thead>
-				<tbody>
-					<!-- row 1 -->
-					<tr>
-						<td>Expected CTC</td>
-						<td id="ECTC">₹</td>
-					</tr>
-					<!-- row 2 -->
-					<tr>
-						<td>Billing Rate Per Month</td>
-						<td id="BR">₹</td>
-					</tr>
 
-					<!-- row 3 -->
-
-					<!-- row 4 -->
-					<tr>
-						<td>Billing Rate for Year</td>
-						<td id="BRY">₹</td>
-					</tr>
-					<!-- row 5 -->
-					<!-- row 6 -->
-					<tr>
-						<td>Margin in Percentage</td>
-						<td id="MarginP" class="">%</td>
-					</tr>
-				</tbody>
-			</table>
+		<div
+			class="stats stats-horizontal lg:stats-horizontal shadow flex justify-center items-center"
+		>
+			<div class="stat">
+				<div class="stat-title">Expected CTC</div>
+				<div class="stat-value" id="ECTC">₹</div>
+			</div>
+			<div class="stat">
+				<div class="stat-title">Billing Rate Per Month</div>
+				<div class="stat-value" id="BR">₹</div>
+			</div>
+			<div class="stat">
+				<div class="stat-title">Billing Rate for Year</div>
+				<div class="stat-value" id="BRY">₹</div>
+			</div>
+			<div class="stat">
+				<div class="stat-title">Margin in Percentage</div>
+				<div class="stat-value" id="MarginP">%</div>
+			</div>
 		</div>
 
 		<script src="margin.js"></script>
